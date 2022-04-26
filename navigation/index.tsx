@@ -15,7 +15,11 @@ import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import TabOneScreen from '../screens/TabOneScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
+//import TabTwoScreen from '../screens/CalendarScreen';
+import CalendarScreen from '../screens/CalendarScreen';
+import AddOutfitScreen from '../screens/AddOutfitScreen';
+import ClosetScreen from '../screens/ClosetScreen';
+import SettingsScreen from '../screens/SettingsScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
@@ -66,7 +70,7 @@ function BottomTabNavigator() {
         name="TabOne"
         component={TabOneScreen}
         options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
-          title: 'Tab One',
+          title: 'Home',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
           headerRight: () => (
             <Pressable
@@ -85,16 +89,44 @@ function BottomTabNavigator() {
         })}
       />
       <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoScreen}
+        name="Calendar"
+        component={CalendarScreen}
         options={{
-          title: 'Tab Two',
+          title: 'Calendar',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
+      <BottomTab.Screen
+        name="AddOutfit"
+        component={AddOutfitScreen}
+        options={{
+          title: 'Add Outfit',
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Closet"
+        component={ClosetScreen}
+        options={{
+          title: 'Closet',
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />
+        }}
+      />
+      <BottomTab.Screen
+        name="Settings"
+        component={SettingsScreen}
+        options={{
+          title: 'Settings',
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />
+        }}
+      />
+      
     </BottomTab.Navigator>
   );
 }
+
+export const exportedBottomTabNavigator = {BottomTabNavigator};
+export const exportedRootNavigator = {RootNavigator};
 
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/

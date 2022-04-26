@@ -4,26 +4,12 @@ import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
-export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+export default function HomeScreen() {
   return (
     <View style={styles.container}>
-
-      <View style={styles.container}>
-        <Text style={styles.title}>Today's View</Text>
-      </View>
-      
+      <Text style={styles.title}>Add Outfit</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-
-      {/*
-      <View style={styles.container}>
-        <Image
-          style={styles.weather}
-          source={require('../sample_weather_api.png')}
-        />
-      </View>
-      */}
-
-      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
     </View>
   );
 }

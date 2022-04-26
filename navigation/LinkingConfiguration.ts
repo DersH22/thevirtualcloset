@@ -20,10 +20,25 @@ const linking: LinkingOptions<RootStackParamList> = {
               TabOneScreen: 'one',
             },
           },
-          TabTwo: {
+          Calendar: {
             screens: {
-              TabTwoScreen: 'two',
+              CalendarScreen: 'calendar',
             },
+          },
+          AddOutfit: {
+            screens: {
+              AddOutfitScreen: 'addoutfit',
+            },
+          },
+          Closet: {
+            screens: {
+              ClosetScreen: 'closet'
+            }
+          },
+          Settings: {
+            screens: {
+              SettingsScreen: 'settings'
+            }
           },
         },
       },
