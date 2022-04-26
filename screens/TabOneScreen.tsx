@@ -1,4 +1,4 @@
-import { StyleSheet, Image} from 'react-native';
+import { StyleSheet, Image, Pressable} from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
@@ -14,16 +14,22 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
       
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 
-      {/*
+      
       <View style={styles.container}>
         <Image
           style={styles.weather}
           source={require('../sample_weather_api.png')}
         />
       </View>
-      */}
 
-      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+      <View>
+        <Pressable style={styles.button} onPress={() => navigation.navigate('Settings')}>
+          <Text>Log in</Text>
+        </Pressable>
+      </View>
+
+
+      {/*<EditScreenInfo path="/screens/TabOneScreen.tsx" />*/}
     </View>
   );
 }
@@ -48,5 +54,14 @@ const styles = StyleSheet.create({
     height: 350,
     marginVertical: 10,
     marginHorizontal: 10,
+  },
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: 'grey',
   }
 });
