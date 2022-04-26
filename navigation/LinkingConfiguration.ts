@@ -40,6 +40,11 @@ const linking: LinkingOptions<RootStackParamList> = {
               SettingsScreen: 'settings'
             }
           },
+          NotFound: {
+            screens: {
+              NotFoundScreen: 'NotFound'
+            }
+          }
         },
       },
       Modal: 'modal',
