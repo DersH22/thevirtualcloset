@@ -32,8 +32,9 @@ Each of the 5 tabs on the navigation bar correspond to the main 5 screens:
 - Closet - ClosetScreen.tsx
 - Settings - Settings.tsx
 
-*Home is TabOneScreen.tsx* - Do not rename this file, the Expo project structure is finicky and wants the first tab to be TabOneScreen.tsx
----
+Note: *Home tab/screen is TabOneScreen.tsx* - Do not rename this file, the Expo project structure is finicky and wants the first tab to be TabOneScreen.tsx
+
+
 Create all new screens in the *screens* folder
 
 To navigate to a new screen, use the following code:
