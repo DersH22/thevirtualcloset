@@ -18,7 +18,7 @@ Install Expo Go on your phone.
 
 Type in the console <code>expo start</code>
 
-## Coding conventions FAQ
+## Coding conventions/developer tips
 
 ### React Native/Expo documentation
 
@@ -34,7 +34,7 @@ Each of the 5 tabs on the navigation bar correspond to the main 5 screens:
 - Closet - ClosetScreen.tsx
 - Settings - Settings.tsx
 
-Note: *Home tab/screen is TabOneScreen.tsx* - Do not rename this file, the Expo project structure is finicky and wants the first tab to be TabOneScreen.tsx
+Note: *Home tab/screen is TabOneScreen.tsx* - Do not rename this file. The Expo project structure is finicky so leave the first tab named TabOneScreen.tsx
 
 
 ### Instructions for creating a new screen
@@ -42,15 +42,14 @@ Note: *Home tab/screen is TabOneScreen.tsx* - Do not rename this file, the Expo 
 **Create all new screens in the *screens* folder**
 
 To navigate to a new screen, use the following code:
-    Navigating to SettingsScreen.tsx
 ```
 <Pressable style={styles.button} onPress={() => navigation.navigate('Settings')}>
     <Text>Log in</Text>
 </Pressable>
 ```
-(This navigation example is on a button)
+*This example creates a button that when clicked navigates you to SettingsScreen.tsx*
 
-You also have to add an object to the *LinkingConfiguration.ts* file in JSON format.
+You also have to add an object to the **LinkingConfiguration.ts** file in JSON format.
 Add it to the bottom of the list of objects in *LinkingOptions*
 
 ```
