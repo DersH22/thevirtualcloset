@@ -18,12 +18,12 @@ Install Expo Go on your phone.
 
 Type in the console <code>expo start</code>
 
-## Coding conventions/developer tips
-
 ### React Native/Expo documentation
 
 - https://docs.expo.dev/get-started/installation/
 - https://docs.expo.dev/ 
+
+## Coding conventions/developer tips
 
 ### Navigation/Nav Bar
 
