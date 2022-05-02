@@ -18,19 +18,39 @@ const linking: LinkingOptions<RootStackParamList> = {
           TabOne: {
             screens: {
               TabOneScreen: 'one',
-            },
+            }
           },
-          TabTwo: {
+          Calendar: {
             screens: {
-              TabTwoScreen: 'two',
-            },
+              CalendarScreen: 'calendar',
+            }
           },
+          AddOutfit: {
+            screens: {
+              AddOutfitScreen: 'addoutfit',
+            }
+          },
+          Closet: {
+            screens: {
+              ClosetScreen: 'closet'
+            }
+          },
+          Settings: {
+            screens: {
+              SettingsScreen: 'settings'
+            }
+          },
+          NotFound: {
+            screens: {
+              NotFoundScreen: 'NotFound'
+            }
+          }
         },
       },
       Modal: 'modal',
-      NotFound: '*',
-    },
-  },
+      NotFound: '*'
+    }
+  }
 };
 
 export default linking;
