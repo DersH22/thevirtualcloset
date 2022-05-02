@@ -3,6 +3,8 @@ import { StyleSheet, Image, Pressable} from 'react-native';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
+import MyCalendar from '../components/MyCalendar';
+import Colors from '../constants/Colors';
 //import pic from 'C:/Users/hartmark/thevirtualcloset/thevirtualcloset/sample_weather_api.png';
 
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
@@ -44,11 +46,12 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   title: {
     fontSize: 20,
+    textAlign: 'left',
+    paddingLeft: 30,
     fontWeight: 'bold',
     marginVertical: 30
   },
