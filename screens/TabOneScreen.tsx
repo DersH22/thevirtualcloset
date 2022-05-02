@@ -1,33 +1,46 @@
-import { StyleSheet, Image} from 'react-native';
+import { StyleSheet, Image, Pressable} from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 import MyCalendar from '../components/MyCalendar';
 import Colors from '../constants/Colors';
+//import pic from 'C:/Users/hartmark/thevirtualcloset/thevirtualcloset/sample_weather_api.png';
 
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
   return (
     <View style={styles.container}>
 
-      <View style={styles.container}>
-        <Text style={styles.title}>Today's View</Text>
-      </View>
+      <Text style={styles.title}>Today's View</Text>
       
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 
-      {/*
+      
       <View style={styles.container}>
         <Image
           style={styles.weather}
           source={require('../sample_weather_api.png')}
         />
       </View>
-      */}
 
-      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+      <View>
+        <Pressable style={styles.button} onPress={() => navigation.navigate('NotFound')}>
+          <Text>Log in</Text>
+        </Pressable>
+      </View>
     </View>
   );
+
+  /*
+  return(
+    <div className='wrapper'>
+      <h1>Today's view</h1>
+      <Image 
+        source={require('../sample_weather_api.png')}
+      />
+    </div>
+
+  )*/
 }
 
 const styles = StyleSheet.create({
@@ -40,17 +53,27 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     paddingLeft: 30,
     fontWeight: 'bold',
-    color: 'grey'
+    marginVertical: 30
   },
   separator: {
-    marginTop: 20,
+    marginVertical: 5,
     height: 1,
     width: '80%',
   },
   weather: {
-    width: 250,
-    height: 350,
+    width: 350,
+    height: 420,
     marginVertical: 10,
     marginHorizontal: 10,
+  },
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: 'grey',
+    marginBottom: 30,
   }
 });
