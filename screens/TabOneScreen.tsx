@@ -9,14 +9,14 @@ import Colors from '../constants/Colors';
 
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
   return (
-    <View style={styles.container}>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
 
       <Text style={styles.title}>Today's View</Text>
       
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 
       
-      <View style={styles.container}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Image
           style={styles.weather}
           source={require('../sample_weather_api.png')}
@@ -24,8 +24,8 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
       </View>
 
       <View>
-        <Pressable style={styles.button} onPress={() => navigation.navigate('NotFound')}>
-          <Text>Log in</Text>
+        <Pressable style={styles.button} onPress={() => navigation.navigate('AddOutfit')}>
+          <Text>Log Outfit</Text>
         </Pressable>
       </View>
     </View>
