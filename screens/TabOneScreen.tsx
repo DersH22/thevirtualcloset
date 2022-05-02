@@ -39,7 +39,6 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
         source={require('../sample_weather_api.png')}
       />
     </div>
-
   )*/
 }
 
