@@ -19,7 +19,7 @@ export default function AddOutfitScreen({ navigation }: RootTabScreenProps<'AddO
       </View>
 
       <View>
-        <Pressable style={styles.button} onPress={() => navigation.navigate('Settings')}>
+        <Pressable style={styles.button} onPress={() => navigation.navigate('OutfitLabels')}>
           <Text>Add Outfit</Text>
         </Pressable>
       </View>

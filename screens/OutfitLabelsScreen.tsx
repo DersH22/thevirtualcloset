@@ -3,6 +3,7 @@ import { StyleSheet, Image, Pressable, ScrollView} from 'react-native';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
+import Navigation from '../navigation';
 
 export default function OutfitLabelsScreen() {
   return (
