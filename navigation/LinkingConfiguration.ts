@@ -40,6 +40,11 @@ const linking: LinkingOptions<RootStackParamList> = {
               SettingsScreen: 'settings'
             }
           },
+          OutfitLabels: {
+            screens: {
+              OutfitLabelsScreen: 'outfitlabels'
+            }
+          },
           NotFound: {
             screens: {
               NotFoundScreen: 'NotFound'

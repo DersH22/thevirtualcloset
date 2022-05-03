@@ -20,6 +20,7 @@ import CalendarScreen from '../screens/CalendarScreen';
 import AddOutfitScreen from '../screens/AddOutfitScreen';
 import ClosetScreen from '../screens/ClosetScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import OutfitLabelsScreen from '../screens/OutfitLabelsScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 

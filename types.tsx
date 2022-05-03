@@ -31,6 +31,8 @@ export type RootTabParamList = {
   AddOutfit: undefined;
   Closet: undefined;
   Settings: undefined;
+  OutfitLabels: undefined;
+  NotFound: undefined;
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<

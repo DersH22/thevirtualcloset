@@ -1,10 +1,13 @@
 import { StyleSheet, Image, Pressable, ScrollView} from 'react-native';
+
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
+import { RootTabScreenProps } from '../types';
+import Navigation from '../navigation';
 
-export default function SettingsScreen({ navigation }: RootTabScreenProps <'Settings'>) {
+export default function OutfitLabelsScreen() {
   return (
-<ScrollView style={{padding: 10, flex: 1}}>
+    <ScrollView style={styles.container}>
       <Text style={styles.title}>Add Outfit</Text>
       {/*<View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />*/}
       {/*<EditScreenInfo path="/screens/TabOneScreen.tsx" />*/}
@@ -15,9 +18,9 @@ export default function SettingsScreen({ navigation }: RootTabScreenProps <'Sett
           source={require('../assets/images/outfit_img/idaddoutfit.png')}
         />
       </View>
-      <View style={{flex: 1}}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Image
-          style={styles.labelimage}
+          style={styles.snowimage}
           source={require('../assets/images/outfit_img/OutfitLabel.png')}
         />
       </View>
@@ -34,12 +37,33 @@ export default function SettingsScreen({ navigation }: RootTabScreenProps <'Sett
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: 8,
+    backgroundColor: "aliceblue",
   },
-  scrollView: {
-    alignItems: 'center',
-    justifyContent: 'center',
+  box: {
+    width: 50,
+    height: 50,
+  },
+  row: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+  },
+  selected: {
+    backgroundColor: "coral",
+    borderWidth: 0,
+  },
+  buttonLabel: {
+    fontSize: 12,
+    fontWeight: "500",
+    color: "coral",
+  },
+  selectedLabel: {
+    color: "white",
+  },
+  label: {
+    textAlign: "center",
+    marginBottom: 10,
+    fontSize: 24,
   },
   title: {
     fontSize: 20,
@@ -51,14 +75,8 @@ const styles = StyleSheet.create({
     width: '80%',
   },
   snowimage: {
-    width: 125,
-    height: 175,
-    marginVertical: 10,
-    marginHorizontal: 10,
-  },
-  labelimage: {
-    width: 400,
-    height: 600,
+    width: 250,
+    height: 350,
     marginVertical: 10,
     marginHorizontal: 10,
   },
