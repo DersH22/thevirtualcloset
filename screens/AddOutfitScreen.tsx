@@ -14,7 +14,7 @@ export default function AddOutfitScreen({ navigation }: RootTabScreenProps<'AddO
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Image
           style={styles.weather}
-          source={require('../assets/images/outfit_img/idaddoutfit.png')}
+          source={require('../assets/images/outfit_img/id1.jpg')}
         />
       </View>
 

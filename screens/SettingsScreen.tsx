@@ -12,13 +12,13 @@ export default function SettingsScreen({ navigation }: RootTabScreenProps <'Sett
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Image
           style={styles.snowimage}
-          source={require('../assets/images/outfit_img/idaddoutfit.png')}
+          source={require('../assets/images/outfit_img/id1.jpg')}
         />
       </View>
       <View style={{flex: 1}}>
         <Image
           style={styles.labelimage}
-          source={require('../assets/images/outfit_img/OutfitLabel.png')}
+          source={require('../assets/images/outfit_img/OutfitLabel2.png')}
         />
       </View>
 
